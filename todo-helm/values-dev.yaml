@@ -1,0 +1,16 @@
+replicaCount: 1
+
+image:
+  pullPolicy: Always
+
+resources:
+  requests:
+    cpu: "50m"
+    memory: "64Mi"
+  limits:
+    cpu: "100m"
+    memory: "128Mi"
+
+ingress:
+  enabled: true
+  host: "dev-todo.virpages.com"

@@ -1,0 +1,19 @@
+replicaCount: 3
+
+resources:
+  requests:
+    cpu: "100m"
+    memory: "128Mi"
+  limits:
+    cpu: "300m"
+    memory: "256Mi"
+
+ingress:
+  enabled: true
+  host: "todo.virpages.com"
+
+hpa:
+  enabled: true
+  minReplicas: 3
+  maxReplicas: 10
+  cpuThreshold: 60
